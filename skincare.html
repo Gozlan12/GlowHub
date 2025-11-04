@@ -2,13 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>GlowHub • Skincare Profile & Rituals</title>
+    <title>GlowHub • Skincare Profile &amp; Rituals</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
         name="description"
         content="GlowHub skincare page with daily rituals, skin profile quiz, and camera analysis placeholder."
     />
-    <!-- إذا كان ملف CSS في نفس المجلد -->
     <link rel="stylesheet" href="glowhub-style.css" />
 </head>
 <body>
@@ -25,7 +24,6 @@
         <nav aria-label="Main navigation">
             <div class="nav-links">
                 <a href="index.html">Home</a>
-                <!-- غيّري الاسم هنا حسب اسم الملف الفعلي -->
                 <a href="skincare.html" class="active">Skincare</a>
                 <a href="today-dashboard.html">Today</a>
                 <a href="progress.html">Progress</a>
@@ -112,7 +110,9 @@
                 <ul class="routine-steps" aria-label="Evening skincare steps">
                     <li class="routine-step">
                         <div>
-                            <div class="routine-step-main">Makeup remover / cleansing balm</div>
+                            <div class="routine-step-main">
+                                Makeup remover / cleansing balm
+                            </div>
                             <div class="routine-step-meta">
                                 Dissolves makeup and sunscreen gently.
                             </div>
@@ -141,7 +141,9 @@
                     </li>
                     <li class="routine-step">
                         <div>
-                            <div class="routine-step-main">Night cream or sleeping mask</div>
+                            <div class="routine-step-main">
+                                Night cream or sleeping mask
+                            </div>
                             <div class="routine-step-meta">
                                 Seals everything in while you rest.
                             </div>
@@ -163,14 +165,109 @@
                     information will be saved for each user.
                 </p>
 
+                <!-- action placeholder for future backend -->
                 <form
                     class="quiz-grid"
                     method="post"
-                    action="/backend/save-skin-profile"
+                    action="#"
                     aria-label="Skin profile quiz form"
                 >
-                    <!-- بقية الأسئلة كما هي -->
-                    <!-- ... نفس الكود اللي كتبتيه بدون تغيير -->
+                    <div class="quiz-question">
+                        <p>How would you describe your skin type?</p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="skin_type" value="normal" />
+                                Normal / balanced
+                            </label>
+                            <label>
+                                <input type="radio" name="skin_type" value="oily" />
+                                Oily or shiny most of the day
+                            </label>
+                            <label>
+                                <input type="radio" name="skin_type" value="dry" />
+                                Dry, tight, or flaky
+                            </label>
+                            <label>
+                                <input type="radio" name="skin_type" value="combination" />
+                                Combination (oily T-zone, normal or dry cheeks)
+                            </label>
+                            <label>
+                                <input type="radio" name="skin_type" value="sensitive" />
+                                Sensitive or easily irritated
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p>What is your main skin concern right now?</p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="skin_concern" value="acne" />
+                                Breakouts and acne
+                            </label>
+                            <label>
+                                <input type="radio" name="skin_concern" value="dark_spots" />
+                                Dark spots or uneven tone
+                            </label>
+                            <label>
+                                <input type="radio" name="skin_concern" value="dryness" />
+                                Dryness and rough texture
+                            </label>
+                            <label>
+                                <input type="radio" name="skin_concern" value="redness" />
+                                Redness or sensitivity
+                            </label>
+                            <label>
+                                <input type="radio" name="skin_concern" value="pores" />
+                                Visible pores and shine
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p>How many steps do you realistically want in your daily routine?</p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="routine_length" value="3" />
+                                3 steps – just the basics
+                            </label>
+                            <label>
+                                <input type="radio" name="routine_length" value="5" />
+                                4–5 steps – I enjoy a little ritual
+                            </label>
+                            <label>
+                                <input type="radio" name="routine_length" value="7" />
+                                6+ steps – skincare is my hobby
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p>How sensitive is your skin to new products?</p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="sensitivity" value="low" />
+                                Not very sensitive – I can try things easily
+                            </label>
+                            <label>
+                                <input type="radio" name="sensitivity" value="medium" />
+                                Sometimes sensitive – I am a bit careful
+                            </label>
+                            <label>
+                                <input type="radio" name="sensitivity" value="high" />
+                                Very sensitive – I need very gentle formulas
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="btn-row">
+                        <button type="submit" class="btn-primary">
+                            Save my skin profile
+                        </button>
+                        <button type="reset" class="btn-secondary">
+                            Clear answers
+                        </button>
+                    </div>
                 </form>
 
                 <hr class="divider" />
@@ -203,8 +300,7 @@
                     In the next phase of the project, this section will use the device
                     camera (via JavaScript <code>getUserMedia</code>) to capture a close
                     image of the skin, then send it to the backend for gentle analysis and
-                    product suggestions. For now, it is a visual placeholder that shows
-                    where the feature will live.
+                    product suggestions. For now, it is a visual placeholder.
                 </p>
                 <div class="btn-row">
                     <button type="button" class="btn-primary" disabled>
@@ -217,8 +313,8 @@
             </div>
             <div class="camera-preview">
                 <p>
-                    Camera preview area.
-                    Later: live video, focus guide, and safe capture button.
+                    Camera preview area. Later: live video, focus guide, and safe capture
+                    button.
                 </p>
             </div>
         </section>
