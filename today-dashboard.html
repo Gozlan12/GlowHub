@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>GlowHub • Today Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+        name="description"
+        content="GlowHub daily dashboard with checklist, mood, mini game, and signup form."
+    />
+    <link rel="stylesheet" href="css/glowhub-style.css" />
+</head>
+<body>
+<div class="page-wrapper">
+    <header>
+        <div class="brand">
+            <div class="brand-logo" aria-hidden="true"></div>
+            <div>
+                <div class="brand-title">GlowHub</div>
+                <div class="brand-subtitle">One soft day at a time</div>
+            </div>
+        </div>
+
+        <nav aria-label="Main navigation">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="skincare.html">Skincare</a>
+                <a href="today-dashboard.html" class="active">Today</a>
+                <a href="progress.html">Progress</a>
+                <a href="contact-us.html">Contact</a>
+                <a href="about-us.html">About</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <header class="page-heading">
+            <p class="page-kicker">daily glow</p>
+            <h1 class="page-title">Today’s Glow Dashboard</h1>
+            <p class="page-description">
+                Track your skincare steps, check in with your mood, and collect Glow
+                Coins for every gentle win. Later, this page will connect to your saved
+                profile and database.
+            </p>
+        </header>
+
+        <section class="dashboard-grid" aria-label="Today overview">
+            <!-- Left column: checklist + mini game -->
+            <article class="card" aria-label="Today checklist and mini game">
+                <h2 class="section-title">
+                    Today’s checklist
+                    <span class="badge">AM + PM</span>
+                </h2>
+
+                <ul class="task-list">
+                    <li class="task-item">
+                        <div>
+                            <div class="task-main-text">Morning cleanse &amp; SPF</div>
+                            <div class="task-sub">
+                                Gentle cleanser, light moisturizer, and sunscreen to protect
+                                your glow.
+                            </div>
+                            <div class="chip-row">
+                                <span class="task-tag">Skincare</span>
+                                <span class="task-tag">Morning</span>
+                            </div>
+                        </div>
+                        <div class="task-time">07:30</div>
+                    </li>
+                    <li class="task-item">
+                        <div>
+                            <div class="task-main-text">Mid-day hydration break</div>
+                            <div class="task-sub">
+                                Drink water and mist your face if you like. One minute just
+                                for you.
+                            </div>
+                            <div class="chip-row">
+                                <span class="task-tag">Hydration</span>
+                                <span class="task-tag">Self-care</span>
+                            </div>
+                        </div>
+                        <div class="task-time">12:45</div>
+                    </li>
+                    <li class="task-item">
+                        <div>
+                            <div class="task-main-text">Evening cleanse &amp; treatment</div>
+                            <div class="task-sub">
+                                Double cleanse, apply treatment serum based on your profile,
+                                and finish with night cream.</div>
+                            <div class="chip-row">
+                                <span class="task-tag">Skincare</span>
+                                <span class="task-tag">Evening</span>
+                            </div>
+                        </div>
+                        <div class="task-time">21:30</div>
+                    </li>
+                    <li class="task-item">
+                        <div>
+                            <div class="task-main-text">Two-minute reflection</div>
+                            <div class="task-sub">
+                                Notice how your skin and mood felt today. No judgment, only
+                                softness.
+                            </div>
+                            <div class="chip-row">
+                                <span class="task-tag">Reflection</span>
+                                <span class="task-tag">Journal</span>
+                            </div>
+                        </div>
+                        <div class="task-time">Before bed</div>
+                    </li>
+                </ul>
+
+                <div class="btn-row">
+                    <a href="#" class="btn-primary" aria-disabled="true">
+                        Mark today as completed
+                    </a>
+                    <a href="#" class="btn-secondary" aria-disabled="true">
+                        I had a busy day – soften my plan
+                    </a>
+                </div>
+
+                <hr class="divider" />
+
+                <div class="game-card" aria-label="Glow coins mini game">
+                    <h3 class="section-title">
+                        Glow Coins mini game
+                        <span class="badge">Gamification</span>
+                    </h3>
+                    <p class="page-description">
+                        In the full version, every completed step will give you Glow Coins.
+                        Later, you will be able to trade them for virtual rewards or
+                        product recommendations. For now, this visual shows how it will
+                        look.
+                    </p>
+                    <div class="game-coins-row">
+                        <div class="glow-coin" aria-hidden="true"></div>
+                        <div class="glow-coin" aria-hidden="true"></div>
+                        <div class="glow-coin" aria-hidden="true"></div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Right column: mood + signup -->
+            <aside class="card" aria-label="Mood and signup">
+                <h2 class="section-title">
+                    Today’s mood
+                    <span class="badge">Check-in</span>
+                </h2>
+
+                <p class="page-description">
+                    Choose the mood that feels closest to you today. Later, JavaScript
+                    will save it and adjust your plans if you are feeling low-energy.
+                </p>
+
+                <div class="chip-row">
+                    <span class="chip">Soft &amp; calm</span>
+                    <span class="chip">Focused &amp; productive</span>
+                    <span class="chip">Tired but trying</span>
+                    <span class="chip">Needing extra care</span>
+                </div>
+
+                <hr class="divider" />
+
+                <h3 class="section-title">
+                    Create your GlowHub profile
+                    <span class="badge">Saved to data.txt later</span>
+                </h3>
+                <p class="page-description">
+                    This mini form represents the user data that will be stored in
+                    <code>data.txt</code> using Node.js in the backend phase. For now, it
+                    is a pure HTML form.
+                </p><!-- later backend: store data in data.txt -->
+                <form
+                    class="signup-form"
+                    method="post"
+                    action="/backend/save-user"
+                    aria-label="GlowHub signup form"
+                >
+                    <div>
+                        <label for="signup-name">Full name</label>
+                        <input
+                            id="signup-name"
+                            name="full_name"
+                            type="text"
+                            required
+                            maxlength="60"
+                        />
+                    </div>
+                    <div>
+                        <label for="signup-email">Email</label>
+                        <input
+                            id="signup-email"
+                            name="email"
+                            type="email"
+                            required
+                            maxlength="80"
+                        />
+                    </div>
+                    <div>
+                        <label for="signup-password">Password</label>
+                        <input
+                            id="signup-password"
+                            name="password"
+                            type="password"
+                            required
+                            minlength="6"
+                            maxlength="30"
+                        />
+                    </div>
+                    <div>
+                        <label for="signup-goal">Main skin goal</label>
+                        <select id="signup-goal" name="skin_goal" required>
+                            <option value="">Choose your main goal</option>
+                            <option value="clear_acne">Clear acne and breakouts</option>
+                            <option value="even_tone">Even tone and fade spots</option>
+                            <option value="hydration">Deep hydration and glow</option>
+                            <option value="calm_sensitivity">Calm sensitivity</option>
+                        </select>
+                    </div>
+
+                    <div class="btn-row">
+                        <button type="submit" class="btn-primary">
+                            Sign up &amp; save
+                        </button>
+                        <button type="reset" class="btn-secondary">
+                            Reset form
+                        </button>
+                    </div>
+                </form>
+            </aside>
+        </section>
+    </main>
+
+    <footer>
+        <p>GlowHub Team 💕 • Gentle routines only, no pressure to be perfect.</p>
+    </footer>
+</div>
+</body>
+</html>

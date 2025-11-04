@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>GlowHub • Progress & Badges</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+        name="description"
+        content="GlowHub progress page with streak meters, badges, and a weekly calendar."
+    />
+    <link rel="stylesheet" href="css/glowhub-style.css" />
+</head>
+<body>
+<div class="page-wrapper">
+    <header>
+        <div class="brand">
+            <div class="brand-logo" aria-hidden="true"></div>
+            <div>
+                <div class="brand-title">GlowHub</div>
+                <div class="brand-subtitle">Progress, not perfection</div>
+            </div>
+        </div>
+
+        <nav aria-label="Main navigation">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="skincare.html">Skincare</a>
+                <a href="today-dashboard.html">Today</a>
+                <a href="progress.html" class="active">Progress</a>
+                <a href="contact-us.html">Contact</a>
+                <a href="about-us.html">About</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <header class="page-heading">
+            <p class="page-kicker">soft tracking</p>
+            <h1 class="page-title">Progress &amp; Achievements</h1>
+            <p class="page-description">
+                This page turns your self-care habits into a gentle visual story. Later,
+                data will come from the database instead of static numbers.
+            </p>
+        </header>
+
+        <section class="progress-layout" aria-label="Progress overview">
+            <!-- Left: meters + calendar -->
+            <article class="card" aria-label="Self-care streaks and calendar">
+                <h2 class="section-title">
+                    Glow streaks
+                    <span class="badge">This month</span>
+                </h2>
+
+                <div class="progress-meter">
+                    <div>
+                        <div class="meter-label">
+                            <span>Skincare consistency</span>
+                            <span class="routine-step-meta">24 / 30 days</span>
+                        </div>
+                        <div class="meter-track" aria-hidden="true">
+                            <div class="meter-fill meter-80"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="meter-label">
+                            <span>Hydration habit</span>
+                            <span class="routine-step-meta">20 / 30 days</span>
+                        </div>
+                        <div class="meter-track" aria-hidden="true">
+                            <div class="meter-fill meter-65"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="meter-label">
+                            <span>Reflection check-ins</span>
+                            <span class="routine-step-meta">15 / 30 days</span>
+                        </div>
+                        <div class="meter-track" aria-hidden="true">
+                            <div class="meter-fill meter-50"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="divider" />
+
+                <h3 class="section-title">
+                    Weekly glow calendar
+                    <span class="badge">Visual mood</span>
+                </h3>
+                <p class="page-description">
+                    Each dot below represents a day where at least one skincare routine
+                    was completed. Later, JavaScript will fill this calendar based on real
+                    data.
+                </p>
+                <table class="progress-calendar">
+                    <thead>
+                    <tr>
+                        <th scope="col">Mon</th>
+                        <th scope="col">Tue</th>
+                        <th scope="col">Wed</th>
+                        <th scope="col">Thu</th>
+                        <th scope="col">Fri</th>
+                        <th scope="col">Sat</th>
+                        <th scope="col">Sun</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><span class="progress-dot" aria-hidden="true"></span></td>
+                        <td></td>
+                        <td><span class="progress-dot" aria-hidden="true"></span></td>
+                        <td><span class="progress-dot" aria-hidden="true"></span></td>
+                        <td></td>
+                        <td><span class="progress-dot" aria-hidden="true"></span></td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <!-- Right: badges -->
+            <aside class="card" aria-label="Achievement badges">
+                <h2 class="section-title">
+                    Achievement badges
+                    <span class="badge">Gentle rewards</span>
+                </h2>
+
+                <div class="badge-grid">
+                    <div class="badge-card">
+                        <div class="badge-title">Morning Glow Keeper</div>
+                        <div class="badge-meta">
+                            Logged your morning routine five days in a row without skipping
+                            sunscreen.
+                        </div>
+                    </div>
+                    <div class="badge-card">
+                        <div class="badge-title">Hydration Hero</div>
+                        <div class="badge-meta">
+                            Drank water and took a hydration break at least 20 days this
+                            month.
+                        </div>
+                    </div>
+                    <div class="badge-card">
+                        <div class="badge-title">Soft Day Listener</div>
+                        <div class="badge-meta">
+                            Marked “busy day” instead of forcing a long routine at least
+                            three times. Rest counts as self-care too.
+                        </div>
+                    </div>
+                    <div class="badge-card">
+                        <div class="badge-title">Reflection Queen</div>
+                        <div class="badge-meta">
+                            Wrote a tiny reflection about your skin and mood for seven
+                            evenings in a row.
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </section>
+    </main>
+
+    <footer>
+        <p>GlowHub Team 💕• Every tiny step still counts as self-care.</p>
+    </footer>
+</div>
+</body>
+</html>

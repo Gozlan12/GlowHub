@@ -1,0 +1,330 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>GlowHub • Skincare Profile & Rituals</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+        name="description"
+        content="GlowHub skincare page with daily rituals, skin profile quiz, and camera analysis placeholder."
+    />
+    <link rel="stylesheet" href="css/glowhub-style.css" />
+</head>
+<body>
+<div class="page-wrapper">
+    <header>
+        <div class="brand">
+            <div class="brand-logo" aria-hidden="true"></div>
+            <div>
+                <div class="brand-title">GlowHub</div>
+                <div class="brand-subtitle">A gentle home for your skin</div>
+            </div>
+        </div>
+
+        <nav aria-label="Main navigation">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="skincare.html" class="active">Skincare</a>
+                <a href="today-dashboard.html">Today</a>
+                <a href="progress.html">Progress</a>
+                <a href="contact-us.html">Contact</a>
+                <a href="about-us.html">About</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <header class="page-heading">
+            <p class="page-kicker">glow planner</p>
+            <h1 class="page-title">Skincare Profile &amp; Daily Rituals</h1>
+            <p class="page-description">
+                Start by understanding your skin, then build a soft, realistic routine
+                around it. GlowHub is created for women who want care without pressure.
+            </p>
+        </header>
+
+        <!-- Layout: rituals on the left, quiz on the right -->
+        <section class="skincare-layout" aria-label="Skincare layout">
+            <!-- Rituals -->
+            <article class="card" aria-label="Daily skincare rituals">
+                <h2 class="section-title">
+                    Daily rituals
+                    <span class="badge">Morning &amp; evening</span>
+                </h2>
+                <p class="page-description">
+                    A simple flow for your skin. Later, JavaScript will adapt these
+                    steps based on your quiz answers and stored profile.
+                </p>
+
+                <h3 class="section-title">
+                    Morning ritual
+                </h3>
+                <ul class="routine-steps" aria-label="Morning skincare steps">
+                    <li class="routine-step">
+                        <div>
+                            <div class="routine-step-main">Gentle cleanser</div>
+                            <div class="routine-step-meta">
+                                30–40 seconds with lukewarm water.
+                            </div>
+                        </div>
+                        <div class="routine-step-meta">Step 1</div>
+                    </li>
+                    <li class="routine-step">
+                        <div>
+                            <div class="routine-step-main">Hydrating mist or toner</div>
+                            <div class="routine-step-meta">
+                                Press into the skin, do not rub.
+                            </div>
+                        </div>
+                        <div class="routine-step-meta">Step 2</div>
+                    </li>
+                    <li class="routine-step">
+                        <div>
+                            <div class="routine-step-main">Vitamin C serum</div>
+                            <div class="routine-step-meta">
+                                Brightens and protects from daily stress.
+                            </div>
+                        </div>
+                        <div class="routine-step-meta">Step 3</div>
+                    </li>
+                    <li class="routine-step"><div>
+                            <div class="routine-step-main">Lightweight moisturizer</div>
+                            <div class="routine-step-meta">
+                                Choose gel or cream according to your skin type.
+                            </div>
+                        </div>
+                        <div class="routine-step-meta">Step 4</div>
+                    </li>
+                    <li class="routine-step">
+                        <div>
+                            <div class="routine-step-main">Broad-spectrum SPF</div>
+                            <div class="routine-step-meta">
+                                At least SPF 30, every single morning.
+                            </div>
+                        </div>
+                        <div class="routine-step-meta">Step 5</div>
+                    </li>
+                </ul>
+
+                <hr class="divider" />
+
+                <h3 class="section-title">
+                    Evening ritual
+                </h3>
+                <ul class="routine-steps" aria-label="Evening skincare steps">
+                    <li class="routine-step">
+                        <div>
+                            <div class="routine-step-main">Makeup remover / cleansing balm</div>
+                            <div class="routine-step-meta">
+                                Dissolves makeup and sunscreen gently.
+                            </div>
+                        </div>
+                        <div class="routine-step-meta">Step 1</div>
+                    </li>
+                    <li class="routine-step">
+                        <div>
+                            <div class="routine-step-main">Second cleanse</div>
+                            <div class="routine-step-meta">
+                                Gel or cream cleanser for a clean base.
+                            </div>
+                        </div>
+                        <div class="routine-step-meta">Step 2</div>
+                    </li>
+                    <li class="routine-step">
+                        <div>
+                            <div class="routine-step-main">
+                                Treatment (retinol, AHA/BHA, or calming serum)
+                            </div>
+                            <div class="routine-step-meta">
+                                Will depend on your sensitivity and goals.
+                            </div>
+                        </div>
+                        <div class="routine-step-meta">Step 3</div>
+                    </li>
+                    <li class="routine-step">
+                        <div>
+                            <div class="routine-step-main">Night cream or sleeping mask</div>
+                            <div class="routine-step-meta">
+                                Seals everything in while you rest.
+                            </div>
+                        </div>
+                        <div class="routine-step-meta">Step 4</div>
+                    </li>
+                </ul>
+            </article>
+
+            <!-- Quiz -->
+            <article class="card" aria-label="Skin profile quiz">
+                <h2 class="section-title">
+                    Skin profile quiz
+                    <span class="badge">Step 1 • Profile</span>
+                </h2>
+                <p class="page-description">
+                    Answer a few questions so GlowHub can gently suggest routines and
+                    products that make sense for your skin. In the full project, this
+                    information will be saved for each user.
+                </p>
+
+                <!-- This form will be processed by Node.js later and saved to data.txt -->
+                <form
+                    class="quiz-grid"
+                    method="post"action="/backend/save-skin-profile"
+                    aria-label="Skin profile quiz form"
+                >
+                    <div class="quiz-question">
+                        <p>How would you describe your skin type?</p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="skin_type" value="normal" />
+                                Normal / balanced
+                            </label>
+                            <label>
+                                <input type="radio" name="skin_type" value="oily" />
+                                Oily or shiny most of the day
+                            </label>
+                            <label>
+                                <input type="radio" name="skin_type" value="dry" />
+                                Dry, tight, or flaky
+                            </label>
+                            <label>
+                                <input type="radio" name="skin_type" value="combination" />
+                                Combination (oily T-zone, normal or dry cheeks)
+                            </label>
+                            <label>
+                                <input type="radio" name="skin_type" value="sensitive" />
+                                Sensitive or easily irritated
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p>What is your main skin concern right now?</p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="skin_concern" value="acne" />
+                                Breakouts and acne
+                            </label>
+                            <label>
+                                <input type="radio" name="skin_concern" value="dark_spots" />
+                                Dark spots or uneven tone
+                            </label>
+                            <label>
+                                <input type="radio" name="skin_concern" value="dryness" />
+                                Dryness and rough texture
+                            </label>
+                            <label>
+                                <input type="radio" name="skin_concern" value="redness" />
+                                Redness or sensitivity
+                            </label>
+                            <label>
+                                <input type="radio" name="skin_concern" value="pores" />
+                                Visible pores and shine
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p>How many steps do you realistically want in your daily routine?</p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="routine_length" value="3" />
+                                3 steps – just the basics
+                            </label>
+                            <label>
+                                <input type="radio" name="routine_length" value="5" />
+                                4–5 steps – I enjoy a little ritual
+                            </label>
+                            <label>
+                                <input type="radio" name="routine_length" value="7" />
+                                6+ steps – skincare is my hobby
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p>How sensitive is your skin to new products?</p><div class="quiz-options">
+                            <label>
+                                <input type="radio" name="sensitivity" value="low" />
+                                Not very sensitive – I can try things easily
+                            </label>
+                            <label>
+                                <input type="radio" name="sensitivity" value="medium" />
+                                Sometimes sensitive – I am a bit careful
+                            </label>
+                            <label>
+                                <input type="radio" name="sensitivity" value="high" />
+                                Very sensitive – I need very gentle formulas
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="btn-row">
+                        <button type="submit" class="btn-primary">
+                            Save my skin profile
+                        </button>
+                        <button type="reset" class="btn-secondary">
+                            Clear answers
+                        </button>
+                    </div>
+                </form>
+
+                <hr class="divider" />
+
+                <h3 class="section-title">
+                    Skin mood tags
+                    <span class="badge">Optional</span>
+                </h3>
+                <p class="page-description">
+                    Choose a tag that matches how your skin usually feels. It will help
+                    GlowHub give softer recommendations later.
+                </p>
+                <div class="skin-type-chips">
+                    <span class="skin-chip">Glowy but oily</span>
+                    <span class="skin-chip">Tired &amp; dull</span>
+                    <span class="skin-chip">Dehydrated</span>
+                    <span class="skin-chip">Calm and happy</span>
+                    <span class="skin-chip">Stressed &amp; breaking out</span>
+                </div>
+            </article>
+        </section>
+
+        <!-- Camera analysis placeholder -->
+        <section class="card camera-card" aria-label="Camera skin analysis">
+            <div>
+                <h2 class="section-title">
+                    Camera skin scan
+                    <span class="badge">Coming with JavaScript</span>
+                </h2>
+                <p class="page-description">
+                    In the next phase of the project, this section will use the device
+                    camera (via JavaScript <code>getUserMedia</code>) to capture a close
+                    image of the skin, then send it to the backend for gentle analysis and
+                    product suggestions. For now, it is a visual placeholder that shows
+                    where the feature will live.
+                </p>
+                <div class="btn-row">
+                    <button type="button" class="btn-primary" disabled>
+                        Start camera analysis
+                    </button>
+                    <button type="button" class="btn-secondary" disabled>
+                        Upload a skin photo
+                    </button>
+                </div>
+            </div>
+            <div class="camera-preview">
+                <p>
+                    Camera preview area.  
+                    Later: live video, focus guide, and safe capture button.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>GlowHub Team 💕 • Educational only, not medical advice.</p>
+    </footer>
+</div>
+</body>
+</html>
+
